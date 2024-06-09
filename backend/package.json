@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+   "engines": {
+    "node": "18.x"
+  },
   "scripts": {
+<<<<<<< HEAD
     "start": "node index.js",
+=======
+     "start": "node index.js",
+>>>>>>> 844a0e7e3397fdb52985f8f352c00697dc8d34ba
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
