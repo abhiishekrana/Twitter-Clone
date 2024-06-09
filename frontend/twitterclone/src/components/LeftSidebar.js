@@ -14,7 +14,7 @@ const LeftSidebar = () => {
 
     const logoutHandler = async () =>{
         try{
-            const USER_API_END_POINT="http://localhost:8080/api/v1/user";
+            const USER_API_END_POINT="twitter-clone-roan-nine.vercel.app";
             const res = await axios.get(`${USER_API_END_POINT}/logout`);
             navigate('/login');
         }catch(error){
