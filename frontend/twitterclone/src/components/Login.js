@@ -14,7 +14,7 @@ const Login = () => {
   
 
     const submitHandler = async (e) => {
-        const USER_API_END_POINT = "http://localhost:8080/api/v1/user";
+        const USER_API_END_POINT = "twitter-clone-roan-nine.vercel.app";
         e.preventDefault();
         // console.log(name, username, email, password);
         if (isLogin) {
