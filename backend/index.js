@@ -16,7 +16,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cookieParser())
 const corsOptions = {
-    origin:["https://deploy-mern-lwhq.vercel.app"],
+    origin:["twitter-clone-roan-nine.vercel.app"],
     methods:["POST","GET"],
     credentials:true
 }
