@@ -15,6 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+<<<<<<< HEAD
   const submitHandler = async (e) => {
     e.preventDefault();
     if (isLogin) {
@@ -30,6 +31,48 @@ const Login = () => {
         if(res.data.success){
           navigate("/");
           toast.success(res.data.message);
+=======
+    const submitHandler = async (e) => {
+        const USER_API_END_POINT = "twitter-clone-bk.vercel.app";
+        e.preventDefault();
+        // console.log(name, username, email, password);
+        if (isLogin) {
+            //login
+            try {
+                const res = await axios.post(`${USER_API_END_POINT}/login`, { email, password }, {
+                    headers: {
+                        'Content-Type': "application/json"
+                    },
+                    withCredentials: true
+                });
+                
+                console.log(res);
+                if (res.data.success) {
+                    navigate("/");
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        } else if (!isLogin) {
+            //signup
+            try {
+                const res = await axios.post(`${USER_API_END_POINT}/register`, { name, username, email, password }, {
+                    headers: {
+                        'Content-Type': "application/json"
+                    },
+                    withCredentials: true
+                })
+                console.log(res);
+                if (res.data.success) {
+                    setIsLogin(true)
+                  
+                }
+
+            } catch (error) {
+              
+                console.log(error)
+            }
+>>>>>>> 1854dd8320472a50504cb80257643efe7eed0a6b
         }
       } catch (error) {
         toast.success(error.response.data.message);

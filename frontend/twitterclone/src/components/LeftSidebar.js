@@ -17,9 +17,16 @@ const LeftSidebar = () => {
 
     const {user} = useSelector(store=>store.user);
     const navigate = useNavigate();
+<<<<<<< HEAD
     const dispatch = useDispatch();
     const logoutHandler = async () => {
         try {
+=======
+
+    const logoutHandler = async () =>{
+        try{
+            const USER_API_END_POINT="twitter-clone-bk.vercel.app";
+>>>>>>> 1854dd8320472a50504cb80257643efe7eed0a6b
             const res = await axios.get(`${USER_API_END_POINT}/logout`);
             dispatch(getUser(null));
             dispatch(getOtherUsers(null));

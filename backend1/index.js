@@ -19,11 +19,9 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:[""],
-    methods:["POST","GET"],
+    origin:"http://localhost:3000",
     credentials:true
 }
-
 app.use(cors(corsOptions));
 
 // api
@@ -31,14 +29,6 @@ app.use("/api/v1/user",userRoute);
 app.use("/api/v1/tweet", tweetRoute);
  
 
-<<<<<<< HEAD
 app.listen(process.env.PORT,() => {
     console.log(`Server listen at port ${process.env.PORT}`);
 })
-=======
-app.listen(port,()=>{
-    console.log(`Server is listing at port ${port}`);
-})
-
-// "server": "nodemon index.js",
->>>>>>> 1854dd8320472a50504cb80257643efe7eed0a6b

@@ -4,19 +4,8 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-   "engines": {
-    "node": "18.x"
-  },
   "scripts": {
-<<<<<<< HEAD
-    "dev": "nodemon index.js",
-=======
-<<<<<<< HEAD
-    "start": "node index.js",
-=======
-     "start": "node index.js",
->>>>>>> 844a0e7e3397fdb52985f8f352c00697dc8d34ba
->>>>>>> 1854dd8320472a50504cb80257643efe7eed0a6b
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
