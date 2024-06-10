@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const TweetSchema = new mongoose.Schema({
+const tweetSchema = new mongoose.Schema({
     description:{
         type:String,
         required:true
@@ -13,10 +13,9 @@ const TweetSchema = new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"User"
     },
-    bookmarks:{
+    userDetails:{
         type:Array,
         default:[]
-    }
+    },
 },{timestamps:true});
-
-export const Tweet = mongoose.model("Tweet",TweetSchema);
+export const Tweet = mongoose.model("Tweet", tweetSchema);

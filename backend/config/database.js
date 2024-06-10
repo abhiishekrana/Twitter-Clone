@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
-
-const MONGO_URI="mongodb+srv://anjanabhishek7017:twitterclone@cluster0.enox4gv.mongodb.net/"
-const databaseConnection = () =>{
-    mongoose.connect(MONGO_URI).then(()=>{
-        console.log("Connected to moongoose")
-    }).catch((error) => {
+import dotenv from "dotenv";
+dotenv.config({
+    path:"../config/.env"
+})
+const databaseConnection = () => {
+    mongoose.connect(process.env.MONGO_URI).then(()=>{
+        console.log("Connected to mongoDB");
+    }).catch((error)=>{
         console.log(error);
-    });
+    })
 }
-
 export default databaseConnection;
